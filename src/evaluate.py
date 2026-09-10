@@ -1,24 +1,8 @@
-"""
-Stage 5: Model Evaluation
-----------------------------
-Scores each trained model on the held-out test set and reports
-R2, MAE and MSE.
-"""
-
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 
 def evaluate_models(models: dict, X_test, Y_test) -> dict:
-    """Evaluate each trained model on the test set.
-
-    Args:
-        models: Dict mapping model name -> fitted model instance.
-        X_test: Test features.
-        Y_test: Test targets.
-
-    Returns:
-        Dict mapping model name -> {"r2": ..., "mae": ..., "mse": ...}
-    """
+  
     results = {}
 
     for name, model in models.items():
@@ -33,7 +17,7 @@ def evaluate_models(models: dict, X_test, Y_test) -> dict:
 
 
 def print_results(results: dict) -> None:
-    """Pretty-print evaluation results for all models."""
+   
     for name, metrics in results.items():
         print(f"--- {name} ---")
         print(f"R2 Score: {metrics['r2']:.4f}")
