@@ -1,21 +1,9 @@
-"""
-Stage 1: Data Loading
-----------------------
-Loads the raw car dataset from CSV and reports basic sanity info.
-"""
 
 import pandas as pd
 
 
 def load_data(path: str = "data/car_data.csv") -> pd.DataFrame:
-    """Load the raw car dataset from a CSV file.
-
-    Args:
-        path: Path to the car_data.csv file.
-
-    Returns:
-        Raw DataFrame, unmodified.
-    """
+ 
     df = pd.read_csv(path)
     return df
 
@@ -30,6 +18,5 @@ def summarize(df: pd.DataFrame) -> None:
 
 
 if __name__ == "__main__":
-    # Allows running this stage standalone: python src/data_loader.py
     df = load_data()
     summarize(df)
