@@ -1,19 +1,3 @@
-"""
-Car Price Predictor — main pipeline
-=====================================
-Runs the full pipeline end to end by calling each stage in src/:
-
-    Stage 1  data_loader.py          -> load raw CSV
-    Stage 2  feature_engineering.py  -> clean + encode features
-    Stage 3  split.py                -> train/test split
-    Stage 4  train.py                -> fit Linear Regression + Random Forest
-    Stage 5  evaluate.py             -> score both models
-    Stage 6  visualize.py            -> save predicted-vs-actual + importance plot
-
-Usage:
-    python main.py
-"""
-
 from src.data_loader import load_data, summarize
 from src.feature_engineering import engineer_features
 from src.split import split_data
